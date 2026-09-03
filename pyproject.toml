@@ -1,0 +1,61 @@
+[build-system]
+requires = ["setuptools>=77,<81", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "karma-vl"
+version = "0.1.0"
+description = "Knowledge-aware risk-constrained adaptive inference for vision-language models"
+readme = "README.md"
+requires-python = ">=3.10,<3.13"
+license = {text = "Research-only until a license is selected"}
+authors = [{name = "KARMA-VL authors"}]
+dependencies = [
+  "joblib>=1.4,<2",
+  "matplotlib>=3.9,<4",
+  "numpy>=2.0,<3",
+  "pandas>=2.2,<4",
+  "pyarrow>=18,<27",
+  "Pillow>=10,<13",
+  "pytest>=8,<10",
+  "PyYAML>=6,<7",
+  "scikit-learn>=1.5,<2",
+  "scipy>=1.13,<2",
+  "tabulate>=0.9,<1",
+  "torch>=2.3,<3",
+]
+
+[project.optional-dependencies]
+inference = [
+  "qwen-vl-utils>=0.0.14",
+  "transformers>=4.57",
+]
+submission = [
+  "pdf2image>=1.17,<2",
+  "pypdf>=5,<7",
+  "python-docx>=1.1,<2",
+]
+test = [
+  "pypdf>=5,<7",
+  "pytest-cov>=5,<8",
+]
+
+[project.scripts]
+karmavl-env-check = "karmavl.environment:main"
+karmavl-smoke-test = "karmavl.models.smoke_test:main"
+karmavl-validate = "karmavl.validation:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+addopts = "-ra --strict-markers --import-mode=importlib"
+pythonpath = ["src", "."]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"

@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "artifact_role": "panel_c_preoutcome_model_pool_freeze",
+  "status": "READY_FOR_EXTERNAL_TIMESTAMP",
+  "freeze_date_utc": "2026-08-31",
+  "pool_selection_rule": "retain the Replication-B incumbent and three locally retained candidates, then add two locally retained candidates from different refreshed families; selection did not use Panel-C predictions or outcomes",
+  "incumbent": {
+    "route_id": "smolvlm_incumbent",
+    "repository": "HuggingFaceTB/SmolVLM-Instruct",
+    "revision": "81cd9a775a4d644f2faf4e7becff4559b46b14c7",
+    "license_from_model_card": "apache-2.0",
+    "local_snapshot": "/mnt2/KARMA_R_KBS_WORKSPACE_20260831/kbs_v7_repb_models/models--HuggingFaceTB--SmolVLM-Instruct/snapshots/81cd9a775a4d644f2faf4e7becff4559b46b14c7",
+    "resolved_weight_bytes": 4492630912
+  },
+  "candidates": [
+    {
+      "route_id": "granite4_vision",
+      "repository": "ibm-granite/granite-4.0-3b-vision",
+      "revision": "bf108f36960fb4df79bf035e506c592f4ee3c2d3",
+      "license_from_model_card": "apache-2.0",
+      "local_snapshot": "/mnt2/KARMA_R_KBS_WORKSPACE_20260831/kbs_v7_repb_models/models--ibm-granite--granite-4.0-3b-vision/snapshots/bf108f36960fb4df79bf035e506c592f4ee3c2d3",
+      "resolved_weight_bytes": 8508365984,
+      "pool_status": "retained_from_replication_b"
+    },
+    {
+      "route_id": "ovis25_9b",
+      "repository": "AIDC-AI/Ovis2.5-9B",
+      "canonical_repository_as_of_freeze": "ATH-MaaS/Ovis2.5-9B",
+      "revision": "d73b2283ae2a930b7762f8d7b8b8a3f0f3b5c3bd",
+      "license_from_model_card": "apache-2.0",
+      "local_snapshot": "/mnt2/KARMA_R_KBS_WORKSPACE_20260831/kbs_v7_repb_models/models--AIDC-AI--Ovis2.5-9B/snapshots/d73b2283ae2a930b7762f8d7b8b8a3f0f3b5c3bd",
+      "resolved_weight_bytes": 18349727512,
+      "pool_status": "retained_from_replication_b"
+    },
+    {
+      "route_id": "phi4_mm",
+      "repository": "microsoft/Phi-4-multimodal-instruct",
+      "revision": "93f923e1a7727d1c4f446756212d9d3e8fcc5d81",
+      "license_from_model_card": "mit",
+      "local_snapshot": "/mnt2/KARMA_R_KBS_WORKSPACE_20260831/kbs_v7_repb_models/models--microsoft--Phi-4-multimodal-instruct/snapshots/93f923e1a7727d1c4f446756212d9d3e8fcc5d81",
+      "resolved_weight_bytes": 11149227208,
+      "pool_status": "retained_from_replication_b"
+    },
+    {
+      "route_id": "qwen3vl_4b",
+      "repository": "Qwen/Qwen3-VL-4B-Instruct",
+      "revision": "ebb281ec70b05090aa6165b016eac8ec08e71b17",
+      "license_from_model_card": "apache-2.0",
+      "local_snapshot": "/mnt2/KARMA_R_KBS_WORKSPACE_20260831/kbs_v6/hf_incumbents/hub/models--Qwen--Qwen3-VL-4B-Instruct/snapshots/ebb281ec70b05090aa6165b016eac8ec08e71b17",
+      "resolved_weight_bytes": 8875719344,
+      "pool_status": "refreshed_for_panel_c"
+    },
+    {
+      "route_id": "internvl35_4b",
+      "repository": "OpenGVLab/InternVL3_5-4B-HF",
+      "revision": "6bd4487402110ef9889ba50eb7aefeb302526fed",
+      "license_from_model_card": "apache-2.0",
+      "local_snapshot": "/mnt2/KARMA_R_KBS_WORKSPACE_20260831/kbs_v6/hf_incumbents/hub/models--OpenGVLab--InternVL3_5-4B-HF/snapshots/6bd4487402110ef9889ba50eb7aefeb302526fed",
+      "resolved_weight_bytes": 9465085464,
+      "pool_status": "refreshed_for_panel_c"
+    }
+  ],
+  "common_inference_contract": {
+    "precision": "bfloat16 unless a pinned model adapter requires float32 for a documented operation",
+    "quantization": "none",
+    "batch_size": 1,
+    "do_sample": false,
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "max_new_tokens": 256,
+    "prompt": "Answer the question using the image. Return only the answer, with no explanation.",
+    "image_preprocessing": "repository processor at the frozen revision; no test-time augmentation",
+    "failure_policy": "maximum 3 identical deterministic attempts; if all fail, mark route failure and score incorrect; no query exclusion",
+    "runtime_measurement": "CUDA-synchronized generation wall time per query; loading/warm-up excluded; one fixed warm-up per model/device",
+    "hardware_freeze": "8 x NVIDIA GeForce RTX 5090, 32607 MiB each, driver 595.58.03",
+    "software_freeze": {
+      "python": "3.12.3",
+      "torch": "2.11.0+cu130",
+      "transformers": "5.8.0",
+      "accelerate": "1.14.0",
+      "numpy": "2.3.5",
+      "pandas": "3.0.5",
+      "pillow": "12.2.0"
+    }
+  },
+  "model_pool_target_outcomes_used": false,
+  "post_timestamp_model_pool_mutation_forbidden": true
+}

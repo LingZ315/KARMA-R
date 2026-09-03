@@ -1,0 +1,51 @@
+KARMA-R Panel-C environment lock
+Protocol: 1.0.2
+Status: READY_FOR_EXTERNAL_IMMUTABLE_TIMESTAMP_DO_NOT_RUN_TARGET; execution environment recorded, not claimed bitwise portable
+
+Execution host recorded at freeze
+- GPU: 8 x NVIDIA GeForce RTX 5090, 32607 MiB each
+- NVIDIA driver: 595.58.03
+- Python: 3.12.3
+- PyTorch: 2.11.0+cu130
+- CUDA runtime encoded by PyTorch build: 13.0
+- transformers: 5.8.0
+- accelerate: 1.14.0
+- NumPy: 2.3.5
+- pandas: 3.0.5
+- Pillow: 12.2.0
+- precision: bfloat16
+- quantization: none
+- batch size: 1
+- attention implementation: SDPA where supported by the pinned adapter
+
+Frozen Qwen semantic deployment
+- visible devices: exactly 4 idle NVIDIA GeForce RTX 5090 GPUs selected by CUDA_VISIBLE_DEVICES
+- physical indices: scheduler-assigned; smoke run used physical 0, 1, 4, 5
+- device mapping: Hugging Face device_map=auto
+- maximum memory: 30 GiB per visible device
+- processor/model cache: local pinned revision required at execution
+- smoke status: PASS on one synthetic-only image/question; strict JSON parse, no fallback
+- smoke generation: 3.307659 synchronized wall seconds, 13.230635 GPU-seconds
+- maximum peak allocated memory: 18402.32 MiB on one logical device
+- GPU-second rule: occupied GPU count multiplied by CUDA-synchronized generation wall time
+
+Frozen model and processor/tokenizer revisions
+- HuggingFaceTB/SmolVLM-Instruct @ 81cd9a775a4d644f2faf4e7becff4559b46b14c7
+- ibm-granite/granite-4.0-3b-vision @ bf108f36960fb4df79bf035e506c592f4ee3c2d3
+- AIDC-AI/Ovis2.5-9B @ d73b2283ae2a930b7762f8d7b8b8a3f0f3b5c3bd
+- microsoft/Phi-4-multimodal-instruct @ 93f923e1a7727d1c4f446756212d9d3e8fcc5d81
+- Qwen/Qwen3-VL-4B-Instruct @ ebb281ec70b05090aa6165b016eac8ec08e71b17
+- OpenGVLab/InternVL3_5-4B-HF @ 6bd4487402110ef9889ba50eb7aefeb302526fed
+- Qwen/Qwen3-VL-32B-Instruct semantic classifier @ 0cfaf48183f594c314753d30a4c4974bc75f3ccb
+
+The processor/tokenizer is loaded from the same repository revision as its model. Remote-code adapters are permitted only where stated in the frozen runner. Model resolution is checked against the pinned commit. No test-time augmentation is used.
+
+Specification bindings
+- requirements-lock.txt is included and SHA-bound by the preregistration manifest.
+- pyproject.toml is included and SHA-bound by the preregistration manifest.
+- model-pool and semantic-classifier configurations are SHA-bound.
+- every result-determining script and imported Panel-C scientific module is SHA-bound by PANEL_C_CODE_MANIFEST.json.
+- the configuration subset is separately SHA-bound by PANEL_C_CONFIGURATION_MANIFEST.json.
+
+Known reproducibility boundary
+The retained record does not independently freeze the Linux kernel build, firmware, cuDNN sub-build, NCCL sub-build, filesystem, or hardware scheduling state. GPU wall times are therefore measured evidence, not asserted bitwise invariants. A future execution receipt must record the visible device set, package versions, model-resolved revisions, and command line. Any revision or manifest drift blocks execution.

@@ -1,0 +1,313 @@
+{
+  "artifact_role": "panel_c_nested_loso_fold_isolation_audit",
+  "cross_fold_reuse": {
+    "acknowledged": true,
+    "permitted_only_with_fold_local_decisions": true,
+    "queries_target_once_and_reused_in_other_non_target_roles": 7474
+  },
+  "dependency_graph": {
+    "edges": [
+      {
+        "from": "holdout_iconqa/profile",
+        "to": "holdout_iconqa/candidate_profiles"
+      },
+      {
+        "from": "holdout_iconqa/calibration",
+        "to": "holdout_iconqa/router_and_controls"
+      },
+      {
+        "from": "holdout_iconqa/policy",
+        "to": "holdout_iconqa/margin"
+      },
+      {
+        "from": "holdout_iconqa/policy",
+        "to": "holdout_iconqa/B_f_star"
+      },
+      {
+        "from": "holdout_iconqa/router_and_controls",
+        "to": "holdout_iconqa/target_predictions"
+      },
+      {
+        "from": "holdout_iconqa/B_f_star",
+        "to": "holdout_iconqa/target_predictions"
+      },
+      {
+        "from": "holdout_mme/profile",
+        "to": "holdout_mme/candidate_profiles"
+      },
+      {
+        "from": "holdout_mme/calibration",
+        "to": "holdout_mme/router_and_controls"
+      },
+      {
+        "from": "holdout_mme/policy",
+        "to": "holdout_mme/margin"
+      },
+      {
+        "from": "holdout_mme/policy",
+        "to": "holdout_mme/B_f_star"
+      },
+      {
+        "from": "holdout_mme/router_and_controls",
+        "to": "holdout_mme/target_predictions"
+      },
+      {
+        "from": "holdout_mme/B_f_star",
+        "to": "holdout_mme/target_predictions"
+      },
+      {
+        "from": "holdout_tallyqa/profile",
+        "to": "holdout_tallyqa/candidate_profiles"
+      },
+      {
+        "from": "holdout_tallyqa/calibration",
+        "to": "holdout_tallyqa/router_and_controls"
+      },
+      {
+        "from": "holdout_tallyqa/policy",
+        "to": "holdout_tallyqa/margin"
+      },
+      {
+        "from": "holdout_tallyqa/policy",
+        "to": "holdout_tallyqa/B_f_star"
+      },
+      {
+        "from": "holdout_tallyqa/router_and_controls",
+        "to": "holdout_tallyqa/target_predictions"
+      },
+      {
+        "from": "holdout_tallyqa/B_f_star",
+        "to": "holdout_tallyqa/target_predictions"
+      },
+      {
+        "from": "holdout_visonlyqa/profile",
+        "to": "holdout_visonlyqa/candidate_profiles"
+      },
+      {
+        "from": "holdout_visonlyqa/calibration",
+        "to": "holdout_visonlyqa/router_and_controls"
+      },
+      {
+        "from": "holdout_visonlyqa/policy",
+        "to": "holdout_visonlyqa/margin"
+      },
+      {
+        "from": "holdout_visonlyqa/policy",
+        "to": "holdout_visonlyqa/B_f_star"
+      },
+      {
+        "from": "holdout_visonlyqa/router_and_controls",
+        "to": "holdout_visonlyqa/target_predictions"
+      },
+      {
+        "from": "holdout_visonlyqa/B_f_star",
+        "to": "holdout_visonlyqa/target_predictions"
+      },
+      {
+        "from": "holdout_wemath2_standard/profile",
+        "to": "holdout_wemath2_standard/candidate_profiles"
+      },
+      {
+        "from": "holdout_wemath2_standard/calibration",
+        "to": "holdout_wemath2_standard/router_and_controls"
+      },
+      {
+        "from": "holdout_wemath2_standard/policy",
+        "to": "holdout_wemath2_standard/margin"
+      },
+      {
+        "from": "holdout_wemath2_standard/policy",
+        "to": "holdout_wemath2_standard/B_f_star"
+      },
+      {
+        "from": "holdout_wemath2_standard/router_and_controls",
+        "to": "holdout_wemath2_standard/target_predictions"
+      },
+      {
+        "from": "holdout_wemath2_standard/B_f_star",
+        "to": "holdout_wemath2_standard/target_predictions"
+      }
+    ],
+    "forbidden_edges": [
+      "heldout_source_or_target -> B_f_star",
+      "heldout_source_or_target -> H2_hyperparameters",
+      "other_outer_fold_policy_pool -> primary_B_f_star"
+    ]
+  },
+  "failures": [],
+  "folds": [
+    {
+      "B_star_selected_with_heldout_source": false,
+      "calibration_sources": [
+        "mme",
+        "tallyqa",
+        "visonlyqa",
+        "wemath2_standard"
+      ],
+      "fold": "holdout_iconqa",
+      "h2_hyperparameters_selected_with_heldout_source": false,
+      "held_out_source": "iconqa",
+      "policy_sources": [
+        "mme",
+        "tallyqa",
+        "visonlyqa",
+        "wemath2_standard"
+      ],
+      "profile_sources": [
+        "mme",
+        "tallyqa",
+        "visonlyqa",
+        "wemath2_standard"
+      ],
+      "role_counts": {
+        "calibration": 2109,
+        "policy": 2111,
+        "profile": 1054,
+        "target": 2200
+      },
+      "target_outcomes_accessed": false,
+      "target_sources": [
+        "iconqa"
+      ]
+    },
+    {
+      "B_star_selected_with_heldout_source": false,
+      "calibration_sources": [
+        "iconqa",
+        "tallyqa",
+        "visonlyqa",
+        "wemath2_standard"
+      ],
+      "fold": "holdout_mme",
+      "h2_hyperparameters_selected_with_heldout_source": false,
+      "held_out_source": "mme",
+      "policy_sources": [
+        "iconqa",
+        "tallyqa",
+        "visonlyqa",
+        "wemath2_standard"
+      ],
+      "profile_sources": [
+        "iconqa",
+        "tallyqa",
+        "visonlyqa",
+        "wemath2_standard"
+      ],
+      "role_counts": {
+        "calibration": 2783,
+        "policy": 2785,
+        "profile": 1391,
+        "target": 515
+      },
+      "target_outcomes_accessed": false,
+      "target_sources": [
+        "mme"
+      ]
+    },
+    {
+      "B_star_selected_with_heldout_source": false,
+      "calibration_sources": [
+        "iconqa",
+        "mme",
+        "visonlyqa",
+        "wemath2_standard"
+      ],
+      "fold": "holdout_tallyqa",
+      "h2_hyperparameters_selected_with_heldout_source": false,
+      "held_out_source": "tallyqa",
+      "policy_sources": [
+        "iconqa",
+        "mme",
+        "visonlyqa",
+        "wemath2_standard"
+      ],
+      "profile_sources": [
+        "iconqa",
+        "mme",
+        "visonlyqa",
+        "wemath2_standard"
+      ],
+      "role_counts": {
+        "calibration": 2109,
+        "policy": 2111,
+        "profile": 1054,
+        "target": 2200
+      },
+      "target_outcomes_accessed": false,
+      "target_sources": [
+        "tallyqa"
+      ]
+    },
+    {
+      "B_star_selected_with_heldout_source": false,
+      "calibration_sources": [
+        "iconqa",
+        "mme",
+        "tallyqa",
+        "wemath2_standard"
+      ],
+      "fold": "holdout_visonlyqa",
+      "h2_hyperparameters_selected_with_heldout_source": false,
+      "held_out_source": "visonlyqa",
+      "policy_sources": [
+        "iconqa",
+        "mme",
+        "tallyqa",
+        "wemath2_standard"
+      ],
+      "profile_sources": [
+        "iconqa",
+        "mme",
+        "tallyqa",
+        "wemath2_standard"
+      ],
+      "role_counts": {
+        "calibration": 2846,
+        "policy": 2846,
+        "profile": 1423,
+        "target": 359
+      },
+      "target_outcomes_accessed": false,
+      "target_sources": [
+        "visonlyqa"
+      ]
+    },
+    {
+      "B_star_selected_with_heldout_source": false,
+      "calibration_sources": [
+        "iconqa",
+        "mme",
+        "tallyqa",
+        "visonlyqa"
+      ],
+      "fold": "holdout_wemath2_standard",
+      "h2_hyperparameters_selected_with_heldout_source": false,
+      "held_out_source": "wemath2_standard",
+      "policy_sources": [
+        "iconqa",
+        "mme",
+        "tallyqa",
+        "visonlyqa"
+      ],
+      "profile_sources": [
+        "iconqa",
+        "mme",
+        "tallyqa",
+        "visonlyqa"
+      ],
+      "role_counts": {
+        "calibration": 2109,
+        "policy": 2111,
+        "profile": 1054,
+        "target": 2200
+      },
+      "target_outcomes_accessed": false,
+      "target_sources": [
+        "wemath2_standard"
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "status": "PASS",
+  "target_outcomes_accessed": false
+}

@@ -1,0 +1,157 @@
+{
+  "artifact_role": "panel_c_result_determining_configuration_manifest",
+  "files": [
+    {
+      "bytes": 1524,
+      "path": "ACTION_SPACE_AND_SELECTOR_CONTRACT.md",
+      "sha256": "3c90de7e710d75a9eedcffbcc8a5a35b5a9b92fc2915f2dd25edcaed3cb815ae"
+    },
+    {
+      "bytes": 3386,
+      "path": "ACTION_SPACE_AUDIT.md",
+      "sha256": "695518dffe85c5fe385f211911bec2212f6e102716227f30c74d09ed1f507ee8"
+    },
+    {
+      "bytes": 15779,
+      "path": "configs/panel_c_analysis_contract.json",
+      "sha256": "ee0c55135223a325815e773a3b6b02e74feddb59d513d7846a7e967949574b76"
+    },
+    {
+      "bytes": 3073,
+      "path": "configs/panel_c_explicit_source_metadata_blind_query_semantics_v1.md",
+      "sha256": "c937dcd50ea6c250207c61240ff325a0f879861f1d5be0288cc23bac023bb720"
+    },
+    {
+      "bytes": 1438,
+      "path": "configs/PANEL_C_EXTERNAL_TIMESTAMP_RECEIPT.schema.json",
+      "sha256": "aa70b39c5b86e22e7437154b6cb09030d622bf0e03ae2c3b15084b4c56308fc2"
+    },
+    {
+      "bytes": 2110,
+      "path": "configs/panel_c_metadata_free_semantic_classifier.json",
+      "sha256": "1dbf4f190720a6b3df4cf814c2e03943e1559332df0cd6e959b9b8c9ac2cb179"
+    },
+    {
+      "bytes": 4443,
+      "path": "configs/panel_c_model_pool.json",
+      "sha256": "95ed150280e12a68fe575618d543e57bf4901a15448ed4e4aa242c2a7f3b8f34"
+    },
+    {
+      "bytes": 2224,
+      "path": "COST_ACCOUNTING_PLAN.md",
+      "sha256": "c43a57760dc26720a39244d72e9b50908144914287125c016d5f77dd12326ccf"
+    },
+    {
+      "bytes": 1055,
+      "path": "DATASET_AND_SPLIT_SPEC.md",
+      "sha256": "c88108ec0e996490ba9056f6aa21603aba61e67b9075ddc3e44913f9af044a23"
+    },
+    {
+      "bytes": 3024,
+      "path": "ENVIRONMENT_LOCK.txt",
+      "sha256": "2f1b53b9300f56a2d66cee2173dcaab57f500b411e387153f8cda9e703429b80"
+    },
+    {
+      "bytes": 2894,
+      "path": "HYPERPARAMETER_PROVENANCE.md",
+      "sha256": "380e2f0801e37b580af783bb5425351ff833cbb2537a36c19b31434642f761ee"
+    },
+    {
+      "bytes": 1017,
+      "path": "HYPOTHESES.md",
+      "sha256": "18bbd9c9898e91676a314a695b1f2a358ad486af71f1e8a443301da3635d8258"
+    },
+    {
+      "bytes": 2136,
+      "path": "manifests/AUTHOR_DECISION_NEW_PANEL_C_SOURCES.md",
+      "sha256": "da9637079b3ba1f0dea6133e0d83e45fa6c941440adf07bbd38a9f24710ea4c2"
+    },
+    {
+      "bytes": 8789,
+      "path": "manifests/panel_c_cohort_manifest.json",
+      "sha256": "44fd6c0de974553f325f1d2df50f3f733ffedb12b5af5de8919777b7ec248ed1"
+    },
+    {
+      "bytes": 7859,
+      "path": "manifests/panel_c_fold_isolation_audit.json",
+      "sha256": "a4b3e121374cac25bd588b2c87a5837de35c4d67e710d4baf2140d4a2ee61012"
+    },
+    {
+      "bytes": 4824,
+      "path": "manifests/panel_c_fold_manifest.json",
+      "sha256": "b06071cb13ea4de0e7ff3a8fbf8cccb3b152a6173e4b6ed76fe198367619c069"
+    },
+    {
+      "bytes": 2007,
+      "path": "manifests/panel_c_model_pool_audit.md",
+      "sha256": "4fc01ca383b01d87cc79eb6f33f4cfd13580175147ec3245c6353a50ea70f17c"
+    },
+    {
+      "bytes": 1933,
+      "path": "manifests/panel_c_power_analysis.md",
+      "sha256": "9d84b9c4ce0d5096646eb1257e60a9bb8e3d4cb0c488ba2c63297f68d65e15da"
+    },
+    {
+      "bytes": 2616,
+      "path": "manifests/panel_c_preoutcome_access_audit.md",
+      "sha256": "8dda7ce23487c2ec24cb89bf8c0937a7a45ce3385898c18763069c8dc216095c"
+    },
+    {
+      "bytes": 865011,
+      "path": "manifests/panel_c_public_split_id_manifest.json",
+      "sha256": "75e89e848e43b3281d5dc5d503a9005e1e56dfe54eebf91f382c6d2b68cfc0c0"
+    },
+    {
+      "bytes": 1441,
+      "path": "manifests/semantic_construct_validation_status.md",
+      "sha256": "3739d603512d07fdd32ecd9d36f995b3971789a4a3c52eaaa71fe6c5ca24a3b2"
+    },
+    {
+      "bytes": 1097,
+      "path": "MODEL_POOL.md",
+      "sha256": "96c4fe1052239f71f99946557eeac2b965ed7baf58d2c7567e7906958fa159dc"
+    },
+    {
+      "bytes": 1966,
+      "path": "PANEL_C_EXTERNAL_PREREGISTRATION_REQUIRED.md",
+      "sha256": "ade7fbdf6416f1c47cea58866feb962095db22a1bd9042cfbda38f615b58b73d"
+    },
+    {
+      "bytes": 817,
+      "path": "PANEL_C_EXTERNAL_TIMESTAMP_RECEIPT_TEMPLATE.json",
+      "sha256": "6ebc57ca54383d751844833abe62ad6c254a84b8ec7c3b7e81dca2c893bc1503"
+    },
+    {
+      "bytes": 13524,
+      "path": "PANEL_C_PROTOCOL.md",
+      "sha256": "6d246051407f456b05ba6d0952335aee1186741b8711fed226f6d4af92898998"
+    },
+    {
+      "bytes": 1475,
+      "path": "PRIMARY_ENDPOINT.md",
+      "sha256": "a55007fe1b6c5c6e04bc7e94292477fddbf129155cee906b1536ee907383695c"
+    },
+    {
+      "bytes": 11642,
+      "path": "runtime/qwen32b_execution_smoke_receipt.json",
+      "sha256": "19947f5259ef7ad9814cc609461f380ff38bf12da4a6c3d3698db15d1126f94d"
+    },
+    {
+      "bytes": 16798,
+      "path": "runtime/qwen32b_execution_smoke_stdout.log",
+      "sha256": "b4fad2d17c979e7218447cca218a546a6c54cb147c42d5317196783f73bbe045"
+    },
+    {
+      "bytes": 3635,
+      "path": "runtime/qwen32b_execution_smoke_test.md",
+      "sha256": "88efa29d35d95e088e97d47314951d49b2691be9fc467b63256c14c4ca5fb2a9"
+    },
+    {
+      "bytes": 2012,
+      "path": "STATISTICAL_ANALYSIS_PLAN.md",
+      "sha256": "cffa09767aedc40a0865f00b285e3498276daff568a623477f16879fe8d1f390"
+    }
+  ],
+  "protocol_version": "1.0.2",
+  "schema_version": 3
+}

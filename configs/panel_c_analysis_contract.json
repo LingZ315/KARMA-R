@@ -1,0 +1,411 @@
+{
+  "schema_version": 2,
+  "protocol_version": "1.0.2",
+  "artifact_role": "panel_c_explicit_source_metadata_blind_nested_loso_analysis_contract",
+  "status": "READY_FOR_EXTERNAL_IMMUTABLE_TIMESTAMP_DO_NOT_RUN_TARGET",
+  "cohort": {
+    "design": "nested_leave_one_source_out",
+    "selected_sources": [
+      "iconqa",
+      "mme",
+      "tallyqa",
+      "visonlyqa",
+      "wemath2_standard"
+    ],
+    "target_counts": {
+      "iconqa": 2200,
+      "mme": 515,
+      "tallyqa": 2200,
+      "visonlyqa": 359,
+      "wemath2_standard": 2200
+    },
+    "pooled_target_n": 7474,
+    "outer_folds": 5,
+    "each_target_query_predicted_once": true,
+    "explicit_source_metadata_available_to_router": false,
+    "latent_source_cues_may_remain": true,
+    "source_cue_sanitization": "none"
+  },
+  "outer_fold_selection": {
+    "B_A_star_scope": "fold_local_policy_accuracy_only",
+    "B_U_star_scope": "fold_local_policy_utility_only",
+    "h2_gate3_accuracy_hyperparameter_scope": "fold_local_non_target_policy_only",
+    "h2_gate4_utility_hyperparameter_scope": "fold_local_non_target_policy_only",
+    "B_star_scope": "fold_local_policy_only",
+    "h2_hyperparameter_scope": "fold_local_non_target_only",
+    "global_cross_fold_selection_for_primary": false,
+    "allowed_roles": [
+      "profile",
+      "calibration",
+      "policy"
+    ],
+    "forbidden_inputs": [
+      "held_out_source_rows",
+      "held_out_source_outcomes",
+      "target_correctness",
+      "target_scores",
+      "other_fold_global_policy_pool"
+    ],
+    "cross_fold_query_reuse": "permitted only in non-target roles when it cannot influence the policy evaluated for that query's held-out source"
+  },
+  "semantic_schema": {
+    "class_order": [
+      "general_visual_reasoning",
+      "fine_grained_perception",
+      "ocr_text_reading",
+      "structured_artifact_reasoning",
+      "spatial_reasoning",
+      "quantitative_reasoning",
+      "science_reasoning"
+    ],
+    "subtype_order": [
+      "document",
+      "chart_graph",
+      "visual_counting",
+      "mathematical_reasoning"
+    ],
+    "query_feature_order": [
+      "primary_class_one_hot[7]",
+      "subtype_one_hot[4]",
+      "ambiguity_indicator"
+    ],
+    "forbidden_router_features": [
+      "source",
+      "source_id",
+      "dataset",
+      "dataset_id",
+      "benchmark",
+      "source_one_hot"
+    ]
+  },
+  "arms": {
+    "H1": "candidate-pooled profile statistics; every candidate receives the same pooled global, class, and subtype vector",
+    "H1_5": "candidate-specific global profile accuracy/support repeated across semantic slots",
+    "H2": "candidate-specific global plus class- and subtype-matched profile accuracy/support"
+  },
+  "feature_estimation": {
+    "global_smoothing": "(successes + 1) / (support + 2)",
+    "class_or_subtype_smoothing": "(successes + 2 * candidate_global_accuracy) / (support + 2)",
+    "minimum_class_or_subtype_support": 25,
+    "unsupported_cell_fallback": "candidate-specific global profile estimate",
+    "estimation_role": "profile",
+    "fold_specific": true
+  },
+  "learners": {
+    "primary": {
+      "id": "L2_full_bilinear_regularized_logistic",
+      "class": "karmavl.kbs_replication_b.learners.BilinearLogisticRouter",
+      "l2": 10.0,
+      "maximum_iterations": 100,
+      "fixed_before_panel_c": true
+    },
+    "sensitivities": {
+      "L1": {
+        "class": "karmavl.kbs_replication_b.learners.LinearLogisticRouter",
+        "l2": 1.0,
+        "maximum_iterations": 100
+      },
+      "L3": {
+        "class": "karmavl.kbs_replication_b.learners.ResidualMLPRouter",
+        "hidden_dimension": 16,
+        "epochs": 400,
+        "learning_rate": 0.02,
+        "l2": 0.01,
+        "seed": 2026082810
+      }
+    }
+  },
+  "policy": {
+    "cost_coefficient_per_gpu_second": 0.01,
+    "margin_grid": [
+      0.0,
+      0.0025,
+      0.005,
+      0.01,
+      0.02
+    ],
+    "gate3_h2_selection": "maximize fold-local policy accuracy; tie-break by higher utility, lower serving GPU cost, then fixed margin order",
+    "gate4_h2_selection": "maximize fold-local policy utility; tie-break by higher accuracy, lower serving GPU cost, then fixed margin order",
+    "margin_selection": "two independently frozen selectors within each outer fold using only that fold's policy rows",
+    "fixed_margin_tie_break_order": [
+      0.0,
+      0.0025,
+      0.005,
+      0.01,
+      0.02
+    ],
+    "candidate_tie_break": "fixed model-pool order"
+  },
+  "simple_controls": {
+    "B_simple": [
+      "incumbent_only",
+      "cheapest_candidate",
+      "static_calibration_global_best",
+      "static_class_conditional_best",
+      "logistic_raw",
+      "nearest_profile"
+    ],
+    "B_A_star_selection": "maximize fold-local policy accuracy; tie-break by higher utility, lower serving GPU cost, then fixed method order",
+    "B_U_star_selection": "maximize fold-local policy utility; tie-break by higher accuracy, lower serving GPU cost, then fixed method order",
+    "B_f_star_selection_role": "policy",
+    "B_f_star_fold_specific": true,
+    "fixed_method_tie_break_order": [
+      "incumbent_only",
+      "cheapest_candidate",
+      "static_calibration_global_best",
+      "static_class_conditional_best",
+      "logistic_raw",
+      "nearest_profile"
+    ],
+    "matched_action_space": {
+      "H2": "incumbent plus all five candidates",
+      "static_calibration_global_best": "incumbent plus all five candidates",
+      "static_class_conditional_best": "incumbent plus all five candidates",
+      "logistic_raw": "incumbent plus all five candidates",
+      "nearest_profile": "incumbent plus all five candidates",
+      "incumbent_only": "incumbent by definition",
+      "cheapest_candidate": "five candidates only; retained as a named newcomer-cost reference, not an adaptive matched-space control",
+      "source_conditional_control": "forbidden in the confirmatory explicit-source-metadata-blind control set"
+    },
+    "pooled_global_B_star_for_primary_forbidden": true,
+    "target_outcomes_used": false
+  },
+  "hyperparameters": {
+    "fixed": {
+      "L2_l2": 10.0,
+      "L2_maximum_iterations": 100,
+      "logistic_raw_l2": 10.0,
+      "logistic_raw_maximum_iterations": 100,
+      "minimum_semantic_support": 25,
+      "global_beta_prior": [
+        1.0,
+        1.0
+      ],
+      "conditional_prior_strength": 2.0,
+      "cost_coefficient": 0.01,
+      "H2_action_space": "incumbent fallback plus all five frozen candidates",
+      "matched_simple_control_action_space": "incumbent plus all five frozen candidates",
+      "logistic_raw_training": {
+        "input_features": "semantic primary-class one-hot[7], subtype one-hot[4], ambiguity indicator, eligible-route one-hot[6]",
+        "normalization": "none",
+        "regularization": "L2=10.0 on non-intercept coefficients; intercept unpenalized",
+        "solver": "deterministic full-batch Newton/IRLS with direct linear solve",
+        "maximum_iterations": 100,
+        "convergence_tolerance": 1e-10,
+        "class_weighting": "none",
+        "labels": "binary route correctness on fold-local calibration rows",
+        "action_space": "incumbent plus five candidates"
+      },
+      "nearest_profile_training": {
+        "representation": "global accuracy, active primary-class accuracy, active subtype accuracy with class fallback",
+        "distance_metric": "unweighted Euclidean distance to [1,1,1]",
+        "tie_break": "lower distance, lower profile generation GPU-seconds, fixed action-space order",
+        "candidate_pool": "incumbent plus five candidates",
+        "incumbent_representation": "same smoothing and profile construction as candidates"
+      },
+      "bootstrap_replicates": 10000,
+      "bootstrap_seed": 2026082811
+    },
+    "fold_selected": {
+      "gate3_accuracy_routing_margin": "policy role only",
+      "gate4_utility_routing_margin": "policy role only",
+      "B_A_star": "policy role only",
+      "B_U_star": "policy role only",
+      "cheapest_candidate": "profile cost only",
+      "static_calibration_global_best": "calibration role only",
+      "static_class_conditional_mapping": "calibration role only"
+    }
+  },
+  "primary_endpoint": {
+    "name": "Delta_A_C",
+    "formula": "sum_f sum_{i in T_f}[Y_i(H2_f,A)-Y_i(B_f,A*)] / sum_f |T_f|",
+    "H2_policy": "fold-specific accuracy-selected H2_A",
+    "comparator": "fold-specific accuracy-selected B_A* without held-out-source data",
+    "pooled_query_weighted_effect": true,
+    "macro_source_effect": "mean_f[Acc(H2_f)-Acc(B_f*)]",
+    "statistical_superiority": "two-sided 95% source-stratified paired-bootstrap CI lower bound > 0",
+    "practical_superiority": "point estimate >= 0.015",
+    "combined_success_rule": "both statistical and practical superiority",
+    "failure_rule": "report not decision-actionable; do not substitute a secondary endpoint"
+  },
+  "gate4_utility_endpoint": {
+    "name": "Delta_U_C",
+    "formula": "U(H2_U)-U(B_U*)",
+    "H2_policy": "fold-specific utility-selected H2_U",
+    "comparator": "fold-specific utility-selected B_U* without held-out-source data",
+    "cross_gate_substitution_forbidden": true
+  },
+  "source_level_reporting": {
+    "required": [
+      "pooled_query_weighted_effect",
+      "macro_source_effect",
+      "median_source_effect",
+      "positive_source_count",
+      "negative_source_count",
+      "source_specific_effects_and_descriptive_intervals"
+    ],
+    "all_sources_positive_required": false
+  },
+  "inference": {
+    "bootstrap": "source-stratified paired percentile bootstrap",
+    "replicates": 10000,
+    "rng": "NumPy PCG64",
+    "seed": 2026082811,
+    "confidence_level": 0.95,
+    "multiplicity": "one primary endpoint; other intervals descriptive"
+  },
+  "method_cost_requirements": {
+    "incumbent_only": {
+      "needs_semantic_classifier": false,
+      "needs_learned_router": false,
+      "onboarding": []
+    },
+    "cheapest_candidate": {
+      "needs_semantic_classifier": false,
+      "needs_learned_router": false,
+      "onboarding": [
+        "profile_cost"
+      ]
+    },
+    "static_calibration_global_best": {
+      "needs_semantic_classifier": false,
+      "needs_learned_router": false,
+      "onboarding": [
+        "calibration_inference"
+      ]
+    },
+    "static_class_conditional_best": {
+      "needs_semantic_classifier": true,
+      "needs_learned_router": false,
+      "onboarding": [
+        "non_target_semantic_generation",
+        "calibration_inference"
+      ]
+    },
+    "logistic_raw": {
+      "needs_semantic_classifier": true,
+      "needs_learned_router": true,
+      "onboarding": [
+        "non_target_semantic_generation",
+        "calibration_inference",
+        "training"
+      ]
+    },
+    "nearest_profile": {
+      "needs_semantic_classifier": true,
+      "needs_learned_router": false,
+      "onboarding": [
+        "non_target_semantic_generation",
+        "profile_inference"
+      ]
+    },
+    "H1": {
+      "needs_semantic_classifier": true,
+      "needs_learned_router": true,
+      "onboarding": [
+        "non_target_semantic_generation",
+        "profile_inference",
+        "calibration_inference",
+        "policy_inference",
+        "training"
+      ]
+    },
+    "H1_5": {
+      "needs_semantic_classifier": true,
+      "needs_learned_router": true,
+      "onboarding": [
+        "non_target_semantic_generation",
+        "profile_inference",
+        "calibration_inference",
+        "policy_inference",
+        "training"
+      ]
+    },
+    "H2": {
+      "needs_semantic_classifier": true,
+      "needs_learned_router": true,
+      "onboarding": [
+        "non_target_semantic_generation",
+        "profile_inference",
+        "calibration_inference",
+        "policy_inference",
+        "training"
+      ]
+    }
+  },
+  "cost": {
+    "units": "GPU-seconds",
+    "C_onboard": "C_profile + C_calibration + C_policy + C_training + non-target feature generation required by the method",
+    "C_serve_per_query": "C_target_feature_generation + C_router + C_selected_model",
+    "C_total": "C_onboard + N * C_serve",
+    "utility": "U_m(N,lambda)=A_m-lambda*C_total_m(N)/N",
+    "historical_convention_preserved": true,
+    "lambda": 0.01,
+    "horizons": [
+      1000,
+      10000,
+      100000,
+      1000000
+    ],
+    "target_semantic_generation_is_serving_cost": true,
+    "primary_cache_assumption": "conservative first-use cost; every evaluated target query incurs semantic inference for methods that require semantic features",
+    "repeated_identical_query_cache": "may be reported only as a separately labelled deployment scenario; not used in confirmatory utility"
+  },
+  "inference_failure_policy": {
+    "semantic_invalid_output": "repeat the identical frozen request up to three total attempts; if still invalid use the frozen general_visual_reasoning/none/ambiguity=true fallback and retain all attempted GPU time",
+    "semantic_timeout_or_oom": "same deterministic attempt budget; terminal failure uses the same frozen fallback, records the error, and retains attempted GPU time",
+    "candidate_empty_timeout_oom_or_exception": "three identical deterministic attempts; if all fail, emit an empty sealed response, success=false, retain attempted GPU time, and score incorrect",
+    "manual_target_repair": false,
+    "target_row_exclusion": false,
+    "early_stopping_on_target_result": false
+  },
+  "semantic_timing_freeze": {
+    "model": "Qwen/Qwen3-VL-32B-Instruct@0cfaf48183f594c314753d30a4c4974bc75f3ccb",
+    "processor_revision": "0cfaf48183f594c314753d30a4c4974bc75f3ccb",
+    "hardware": "exactly four visible NVIDIA GeForce RTX 5090 GPUs",
+    "precision": "bfloat16",
+    "quantization": "none",
+    "device_map": "auto",
+    "maximum_memory_per_visible_gpu": "30 GiB",
+    "batch_size": 1,
+    "warmup": "one fixed outcome-free synthetic warm-up before timed rows",
+    "timing": "CUDA-synchronized generation wall time across all four occupied devices",
+    "GPU_seconds": "4 multiplied by synchronized generation wall seconds",
+    "preprocessing": "repository processor at frozen revision",
+    "denominator": "all attempted target queries including terminal failures",
+    "terminal_failure_cost": "measured attempted GPU time retained; failure scores incorrect",
+    "synthetic_smoke_receipt": "revision_outputs/qwen32b_execution_smoke_receipt.json",
+    "synthetic_smoke_status": "PASS"
+  },
+  "chronology": {
+    "target_outcomes_inspected": false,
+    "model_inference_executed": false,
+    "external_timestamp_receipt": "ABSENT",
+    "target_execution_authorized": false,
+    "status": "READY_FOR_EXTERNAL_IMMUTABLE_TIMESTAMP_DO_NOT_RUN_TARGET",
+    "authoritative_order": [
+      "freeze protocol and code",
+      "publish GitHub immutable preregistration release",
+      "live-verify release and create authorization lock",
+      "run fold-local non-target semantic and candidate inference",
+      "score non-target profile/calibration/policy roles",
+      "fit routers and select Gate-3 H2_A, Gate-4 H2_U, B_A*, and B_U*",
+      "freeze all five fold policies as one hash-bound bundle",
+      "run fold-scoped target semantic inference",
+      "generate all target routing decisions",
+      "freeze the single all-fold target-route ledger",
+      "run only route-required target candidate inference and seal outputs",
+      "score target predictions",
+      "run Gate-3 primary accuracy analysis and bootstrap",
+      "run Gate-4 deployment utility analysis",
+      "only then run exploratory or oracle analyses"
+    ],
+    "target_candidate_inference_requires": [
+      "PANEL_C_TARGET_EXECUTION_AUTHORIZED.lock",
+      "PANEL_C_FOLD_POLICIES_FROZEN.lock",
+      "PANEL_C_TARGET_ROUTES_FROZEN.lock"
+    ],
+    "target_answer_open_requires_policy_and_route_freezes": true,
+    "filesystem_timestamps_are_secondary_evidence": true
+  }
+}

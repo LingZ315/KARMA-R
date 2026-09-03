@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Panel C GitHub immutable-release verification request",
+  "type": "object",
+  "required": [
+    "provider",
+    "release_id",
+    "persistent_url",
+    "repository",
+    "tag",
+    "commit_sha",
+    "published_at",
+    "prerelease",
+    "immutable",
+    "asset_name",
+    "local_archive_sha256",
+    "remote_archive_sha256",
+    "verification_status",
+    "target_execution_authorized"
+  ],
+  "properties": {
+    "provider": {"const": "github"},
+    "release_id": {"type": "string", "pattern": "^[1-9][0-9]*$"},
+    "persistent_url": {"type": "string", "pattern": "^https://github\\.com/"},
+    "repository": {"type": "string", "pattern": "^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$"},
+    "tag": {"type": "string", "minLength": 1},
+    "commit_sha": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+    "published_at": {"type": "string", "format": "date-time"},
+    "prerelease": {"type": "boolean"},
+    "immutable": {"const": true},
+    "asset_name": {"const": "KARMA_R_PANEL_C_PREREGISTRATION_V3.zip"},
+    "local_archive_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "remote_archive_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "verification_status": {"const": "PENDING_REMOTE_VERIFICATION"},
+    "target_execution_authorized": {"const": false},
+    "attestation_requested": {"type": "boolean"}
+  },
+  "additionalProperties": false
+}

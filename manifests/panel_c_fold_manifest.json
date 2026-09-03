@@ -1,0 +1,141 @@
+{
+  "artifact_role": "panel_c_source_blind_loso_fold_manifest",
+  "excluded_sources": {
+    "chartmuseum": "eligible N=120 below minimum 300",
+    "tablevqa_bench": "no eligible unseen exact-image groups"
+  },
+  "fold_roles_sha256": "5504d64195df400558fb87c19b2ff4243cdd49ace6320bfa7343aaca4d4191a0",
+  "folds": [
+    {
+      "fold_id": "holdout_iconqa",
+      "held_out_source": "iconqa",
+      "roles": {
+        "calibration": {
+          "count": 2109,
+          "query_id_sha256": "77cd1a2f5794f95f02d2d6b2446fdb6bcd3da95dca5ac8b1984c5323439b4750"
+        },
+        "policy": {
+          "count": 2111,
+          "query_id_sha256": "2fbf70a3a5fb196f71ebd708ab50527c980d3ff8d79b4373c5c551637af0ac35"
+        },
+        "profile": {
+          "count": 1054,
+          "query_id_sha256": "1334d6b94d282e637b214e9c49c1a43f6b12ded20d0675368a2a6f2848e9820c"
+        },
+        "target": {
+          "count": 2200,
+          "query_id_sha256": "c1218c44cc3103ca2c1ef1a760ec0749bd7645763fd2af626f5866b9c834c0f6"
+        }
+      },
+      "source_feature_exposed_to_router": false,
+      "target_source_absent_from_profile_calibration_policy": true
+    },
+    {
+      "fold_id": "holdout_mme",
+      "held_out_source": "mme",
+      "roles": {
+        "calibration": {
+          "count": 2783,
+          "query_id_sha256": "d5e31312f194ada0502401af6d4a015b5f0be8ff927294132fc028c12e602ec0"
+        },
+        "policy": {
+          "count": 2785,
+          "query_id_sha256": "aa99f47361f9359cdbf2cdd1a295396050c2ddbb0031b130731e188e9b11ebba"
+        },
+        "profile": {
+          "count": 1391,
+          "query_id_sha256": "4e9c62171b9aadaec26887add5d31e3263dfbc96568abfc6fe55b73bd412aaf3"
+        },
+        "target": {
+          "count": 515,
+          "query_id_sha256": "0ab7cc243d2c0afc231bf3dd0bd4717a6299a82837c193e95d726f6323af3d03"
+        }
+      },
+      "source_feature_exposed_to_router": false,
+      "target_source_absent_from_profile_calibration_policy": true
+    },
+    {
+      "fold_id": "holdout_tallyqa",
+      "held_out_source": "tallyqa",
+      "roles": {
+        "calibration": {
+          "count": 2109,
+          "query_id_sha256": "7e6da3887b222ec891eca8c96decfe160f35bdaa144f982edd8ef1c46246c6c3"
+        },
+        "policy": {
+          "count": 2111,
+          "query_id_sha256": "3855195cb99ec1ff3de6de60a267b270c1489bdf8feb31f5ad3dd606be1dc2ec"
+        },
+        "profile": {
+          "count": 1054,
+          "query_id_sha256": "d8cd9091a4e03fdc57473edb75cd3348ed834b506a136bc6f3de4a0377aa5af8"
+        },
+        "target": {
+          "count": 2200,
+          "query_id_sha256": "92c7bb2ca33ec5d8ab98aba3105ee5ff295f168409e99bd86688c52df8a9a1eb"
+        }
+      },
+      "source_feature_exposed_to_router": false,
+      "target_source_absent_from_profile_calibration_policy": true
+    },
+    {
+      "fold_id": "holdout_visonlyqa",
+      "held_out_source": "visonlyqa",
+      "roles": {
+        "calibration": {
+          "count": 2846,
+          "query_id_sha256": "38b09ab599a52a1b6b3dfdbe560a0860059760b4d134b9bb4b3a5cf1f4871ac4"
+        },
+        "policy": {
+          "count": 2846,
+          "query_id_sha256": "108810acbd3b85d702706ec3f79a37515bc4595091ad9f31ce1c8604684fd535"
+        },
+        "profile": {
+          "count": 1423,
+          "query_id_sha256": "7df5a4c43b00ee3a79db51757658181e7d9acc75eaf841b201e5a5f43eba4217"
+        },
+        "target": {
+          "count": 359,
+          "query_id_sha256": "ac3634da4aa39ab64f70e732e5fe3aab0c89a2f7fc7961725818e8626fa26502"
+        }
+      },
+      "source_feature_exposed_to_router": false,
+      "target_source_absent_from_profile_calibration_policy": true
+    },
+    {
+      "fold_id": "holdout_wemath2_standard",
+      "held_out_source": "wemath2_standard",
+      "roles": {
+        "calibration": {
+          "count": 2109,
+          "query_id_sha256": "79776ea1a1bf49195843481f88ad193bbf67fc67de096d94001cf5a8b01e5a5f"
+        },
+        "policy": {
+          "count": 2111,
+          "query_id_sha256": "a449fadff2ef73f62efc9122be75a582a6a930869a0b4cfb89f1c5651aefd895"
+        },
+        "profile": {
+          "count": 1054,
+          "query_id_sha256": "408869b19526bb0ecf56f0f3477e7168f3b0e3e14d93c1971feeefc7db8da6c3"
+        },
+        "target": {
+          "count": 2200,
+          "query_id_sha256": "325d8cd4f187301d6cea2b91df2c36b20f900af7682a49bb2f947250a0f75e2b"
+        }
+      },
+      "source_feature_exposed_to_router": false,
+      "target_source_absent_from_profile_calibration_policy": true
+    }
+  ],
+  "schema_version": 1,
+  "selected_sources": [
+    "iconqa",
+    "mme",
+    "tallyqa",
+    "visonlyqa",
+    "wemath2_standard"
+  ],
+  "selection_seed": "karma-r-panel-c-source-blind-loso-v1-20260831",
+  "source_feature_exposed_to_router": false,
+  "status": "FROZEN_IDS_PRE_EXTERNAL_TIMESTAMP"
+}

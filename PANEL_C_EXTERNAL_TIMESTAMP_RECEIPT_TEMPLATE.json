@@ -1,0 +1,19 @@
+{
+  "artifact_role": "non_authorizing_external_timestamp_receipt_template",
+  "provider": "github",
+  "release_id": null,
+  "persistent_url": null,
+  "repository": null,
+  "tag": null,
+  "commit_sha": null,
+  "published_at": null,
+  "prerelease": null,
+  "immutable": null,
+  "asset_name": "KARMA_R_PANEL_C_PREREGISTRATION_V3.zip",
+  "local_archive_sha256": null,
+  "remote_archive_sha256": null,
+  "verification_status": "TEMPLATE_NOT_A_RECEIPT",
+  "target_execution_authorized": false,
+  "attestation_requested": false,
+  "instructions": "Copy this template outside the frozen package only after publishing the exact archive. Replace nulls with values returned by the live GitHub API, set verification_status to PENDING_REMOTE_VERIFICATION, and run the verifier. This template cannot authorize target execution."
+}

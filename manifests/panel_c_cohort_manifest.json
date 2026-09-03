@@ -1,0 +1,245 @@
+{
+  "artifact_hashes": {
+    "fold_manifest": "b06071cb13ea4de0e7ff3a8fbf8cccb3b152a6173e4b6ed76fe198367619c069",
+    "fold_roles": "5504d64195df400558fb87c19b2ff4243cdd49ace6320bfa7343aaca4d4191a0",
+    "outcome_blind_router_inputs": "fca07d5287f583455300a5777e670018b15edeb125ad1df75cb14149d134a4c5",
+    "row_manifest": "9505d21d1d420eeac9d63cdad8421497e27616e1f6057c7e24f1ed80cb3617d7",
+    "sealed_reference_answers": "0ea10a8a24d54dbce89dcf3e6f1b7150c37312288be3b5f1089dc705bfb1ec2e"
+  },
+  "artifact_role": "panel_c_preoutcome_cohort_manifest",
+  "excluded_sources": {
+    "chartmuseum": "eligible N=120 below minimum 300",
+    "tablevqa_bench": "no eligible unseen exact-image groups"
+  },
+  "historical_fingerprint_input": {
+    "pre_replication_b_manifest": "/mnt2/KARMA_R_KBS_WORKSPACE_20260831/kbs_v7_ALL_PRIOR_FINGERPRINTS.json",
+    "pre_replication_b_manifest_sha256": "4c5f1f28ce08aa03a4bbf7f892f38a90725c02eb31bd8a826c4cb20b0548d0ea",
+    "prior_exact_image_count_after_union": 18131,
+    "prior_exact_sample_count_after_union": 28923,
+    "replication_b_row_manifest": "/mnt2/KARMA_R_KBS_WORKSPACE_20260831/kbs_v7_replication_b_v1/private/row_manifest.jsonl",
+    "replication_b_row_manifest_sha256": "cdd822a3f40637cf5a3a55e8652c6b1d267253a41847a9936fb43fe3dd171cca",
+    "replication_b_rows_added": 8560
+  },
+  "model_inference_executed": false,
+  "redistribution": "questions, answers, images, source record identifiers, and fold-role rows remain restricted",
+  "schema_version": 1,
+  "selected_counts": {
+    "iconqa": 2200,
+    "mme": 515,
+    "tallyqa": 2200,
+    "visonlyqa": 359,
+    "wemath2_standard": 2200
+  },
+  "selected_sources": [
+    "iconqa",
+    "mme",
+    "tallyqa",
+    "visonlyqa",
+    "wemath2_standard"
+  ],
+  "selected_total": 7474,
+  "selection_seed": "karma-r-panel-c-source-blind-loso-v1-20260831",
+  "selection_used_answers": false,
+  "selection_used_correctness": false,
+  "selection_used_cost": false,
+  "selection_used_predictions": false,
+  "semantic_label_plan": "externally frozen image/question-only classifier",
+  "semantic_labels_in_router_inputs": false,
+  "source_adapter": {
+    "path": "/mnt2/KARMA_R_KBS_WORKSPACE_20260831/kbs_v7_panel_c_preoutcome_20260831/protocol_code/frozen_source_adapter.py",
+    "sha256": "8af89ebdafad6c445d828de2cdcadcd5431c424e5bb65b52b3f2ded29d6b8a30"
+  },
+  "source_audits": {
+    "chartmuseum": {
+      "cross_source_duplicate_image_excluded": 0,
+      "eligible_after_all_filters": 120,
+      "eligible_after_historical_and_within_source_filter": 120,
+      "exclusions": {
+        "prior_exact_image_overlap_excluded": 1037,
+        "within_source_duplicate_image_excluded": 5
+      },
+      "raw_rows": 1162,
+      "source_spec": {
+        "files": [
+          "data/dev-00000-of-00001-6dfc215b35b5fc35.parquet",
+          "data/test-00000-of-00001-d549f7069f75a077.parquet"
+        ],
+        "license": "cc-by-sa-4.0",
+        "quota": {
+          "calibration": 96,
+          "policy": 96,
+          "profile": 48,
+          "target": 566
+        },
+        "repository": "lytang/ChartMuseum",
+        "revision": "462d46deb187d8a40c5a9de4e69e14f1df982e58"
+      }
+    },
+    "iconqa": {
+      "cross_source_duplicate_image_excluded": 0,
+      "eligible_after_all_filters": 16325,
+      "eligible_after_historical_and_within_source_filter": 16325,
+      "exclusions": {
+        "prior_exact_image_overlap_excluded": 2764,
+        "within_source_duplicate_image_excluded": 819
+      },
+      "raw_rows": 19908,
+      "source_spec": {
+        "files": [
+          "data/test-00000-of-00001-e3c690d531807508.parquet",
+          "data/val-00000-of-00001-f9787027db08d358.parquet"
+        ],
+        "license": "UPSTREAM_CARD_UNDECLARED_EVALUATION_ONLY_NOT_REDISTRIBUTED",
+        "quota": {
+          "calibration": 298,
+          "policy": 256,
+          "profile": 86,
+          "target": 1560
+        },
+        "repository": "lmms-lab-encoder/ICON-QA",
+        "revision": "94f9ba83a935851992dfa0e9b66b7ba2aba4cb7e"
+      }
+    },
+    "mme": {
+      "cross_source_duplicate_image_excluded": 0,
+      "eligible_after_all_filters": 515,
+      "eligible_after_historical_and_within_source_filter": 515,
+      "exclusions": {
+        "prior_exact_image_overlap_excluded": 1340,
+        "source_image_pixel_budget_excluded": 4,
+        "within_source_duplicate_image_excluded": 515
+      },
+      "raw_rows": 2374,
+      "source_spec": {
+        "files": [
+          "data/test-00000-of-00004-a25dbe3b44c4fda6.parquet",
+          "data/test-00001-of-00004-7d22c7f1aba6fca4.parquet",
+          "data/test-00002-of-00004-594798fd3f5b029c.parquet",
+          "data/test-00003-of-00004-53ae1794f93b1e35.parquet"
+        ],
+        "license": "UPSTREAM_CARD_UNDECLARED_EVALUATION_ONLY_NOT_REDISTRIBUTED",
+        "quota": {
+          "calibration": 42,
+          "policy": 84,
+          "profile": 84,
+          "target": 450
+        },
+        "repository": "lmms-lab-encoder/MME",
+        "revision": "d6c9023f017b564f7b3ccccf5348166bce8fdbcd"
+      }
+    },
+    "tablevqa_bench": {
+      "cross_source_duplicate_image_excluded": 0,
+      "eligible_after_all_filters": 0,
+      "eligible_after_historical_and_within_source_filter": 0,
+      "exclusions": {
+        "prior_exact_image_overlap_excluded": 1500
+      },
+      "raw_rows": 1500,
+      "source_spec": {
+        "files": [
+          "data/fintabnetqa-00000-of-00001-c337fe9eb7a70460.parquet",
+          "data/vtabfact-00000-of-00001-ecd1dbae37761ddd.parquet",
+          "data/vwtq-00000-of-00001-764eb826ab450a91.parquet",
+          "data/vwtq_syn-00000-of-00001-2daaa7285aca2c1d.parquet"
+        ],
+        "license": "cc-by-4.0",
+        "quota": {
+          "calibration": 108,
+          "policy": 108,
+          "profile": 54,
+          "target": 624
+        },
+        "repository": "terryoo/TableVQA-Bench",
+        "revision": "17e291af2b1cbc9340509a0412a6f1c05b0a76b5"
+      }
+    },
+    "tallyqa": {
+      "cross_source_duplicate_image_excluded": 0,
+      "eligible_after_all_filters": 8468,
+      "eligible_after_historical_and_within_source_filter": 8468,
+      "exclusions": {
+        "prior_exact_image_overlap_excluded": 1400
+      },
+      "raw_rows": 9868,
+      "source_spec": {
+        "files": [
+          "data/train-00000-of-00010.parquet"
+        ],
+        "license": "UPSTREAM_CARD_UNDECLARED_EVALUATION_ONLY_NOT_REDISTRIBUTED",
+        "quota": {
+          "calibration": 180,
+          "policy": 168,
+          "profile": 72,
+          "target": 980
+        },
+        "repository": "nimapourjafar/mm_tallyqa",
+        "revision": "a62372c438b3527b51c71eb0f136c6ae4d1d81c9"
+      }
+    },
+    "visonlyqa": {
+      "cross_source_duplicate_image_excluded": 0,
+      "eligible_after_all_filters": 359,
+      "eligible_after_historical_and_within_source_filter": 359,
+      "exclusions": {
+        "prior_exact_image_overlap_excluded": 1211,
+        "within_source_duplicate_image_excluded": 30
+      },
+      "raw_rows": 1600,
+      "source_spec": {
+        "license": "gpl-3.0",
+        "quota": {
+          "calibration": 84,
+          "policy": 96,
+          "profile": 60,
+          "target": 560
+        },
+        "repositories": [
+          [
+            "ryokamoi/VisOnlyQA_Eval_Real_v1.1",
+            "3747d1370919a6ed0b7ee09896ef6dbffc8aa6d9"
+          ],
+          [
+            "ryokamoi/VisOnlyQA_Eval_Synthetic",
+            "ef0b5fbcc40a35fdd2947f9b65bed8a8ee99e86d"
+          ]
+        ]
+      }
+    },
+    "wemath2_standard": {
+      "cross_source_duplicate_image_excluded": 0,
+      "eligible_after_all_filters": 2368,
+      "eligible_after_historical_and_within_source_filter": 2368,
+      "exclusions": {
+        "prior_exact_image_overlap_excluded": 2752,
+        "source_image_pixel_budget_excluded": 400,
+        "source_image_unreadable_or_decompression_risk_excluded": 47,
+        "within_source_duplicate_image_excluded": 276
+      },
+      "raw_rows": 5843,
+      "source_spec": {
+        "files": [
+          "data/standard-00000-of-00001-6bb245f2ae7687a3.parquet"
+        ],
+        "license": "UPSTREAM_CARD_UNDECLARED_EVALUATION_ONLY_NOT_REDISTRIBUTED",
+        "quota": {
+          "calibration": 216,
+          "policy": 216,
+          "profile": 108,
+          "target": 1260
+        },
+        "repository": "We-Math/We-Math2.0-Standard",
+        "revision": "19064a4b3be262db1fadc952d03b3102acccf942"
+      }
+    }
+  },
+  "source_feature_in_router_inputs": false,
+  "source_selection_rule": {
+    "include_all_source_adapters_meeting_minimum": true,
+    "maximum_rows_per_source": 2200,
+    "minimum_unseen_unique_images": 300,
+    "outcome_based_selection": false
+  },
+  "status": "READY_FOR_EXTERNAL_PROTOCOL_TIMESTAMP_NO_MODEL_INFERENCE",
+  "target_outcomes_inspected": false
+}

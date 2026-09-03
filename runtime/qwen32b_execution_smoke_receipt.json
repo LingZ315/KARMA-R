@@ -1,0 +1,332 @@
+{
+  "artifact_role": "qwen32b_outcome_free_synthetic_execution_smoke_receipt",
+  "completed_utc": "2026-09-01T06:14:40.581059+00:00",
+  "frozen_inputs": {
+    "config_path": "/mnt2/KARMA_R_KBS_WORKSPACE_20260831/kbs_v7_0_2_smoke/panel_c_metadata_free_semantic_classifier.json",
+    "config_sha256": "830402abd3b8bcc93d1e38f24b3576a9b25955563b73c0f15214a964b57f6e51",
+    "do_sample": false,
+    "max_new_tokens": 192,
+    "prompt_path": "/mnt2/KARMA_R_KBS_WORKSPACE_20260831/kbs_v7_0_2_smoke/panel_c_explicit_source_metadata_blind_query_semantics_v1.md",
+    "prompt_sha256": "c937dcd50ea6c250207c61240ff325a0f879861f1d5be0288cc23bac023bb720",
+    "seed": 70000000
+  },
+  "generation": {
+    "fallback_used": false,
+    "parsed_response": {
+      "ambiguity": false,
+      "primary_class": "quantitative_reasoning",
+      "rationale": "Direct enumeration of visible navy rectangles is required; three are present.",
+      "subtype": "visual_counting"
+    },
+    "raw_response": "{\"primary_class\": \"quantitative_reasoning\", \"subtype\": \"visual_counting\", \"ambiguity\": false, \"rationale\": \"Direct enumeration of visible navy rectangles is required; three are present.\"}",
+    "strict_schema_parse": true
+  },
+  "model": {
+    "attention_implementation": "sdpa",
+    "device_map_strategy": "auto",
+    "dtype": "bfloat16",
+    "hf_device_map": {
+      "lm_head": "3",
+      "model.language_model.embed_tokens": "0",
+      "model.language_model.layers.0": "0",
+      "model.language_model.layers.1": "0",
+      "model.language_model.layers.10": "0",
+      "model.language_model.layers.11": "0",
+      "model.language_model.layers.12": "0",
+      "model.language_model.layers.13": "1",
+      "model.language_model.layers.14": "1",
+      "model.language_model.layers.15": "1",
+      "model.language_model.layers.16": "1",
+      "model.language_model.layers.17": "1",
+      "model.language_model.layers.18": "1",
+      "model.language_model.layers.19": "1",
+      "model.language_model.layers.2": "0",
+      "model.language_model.layers.20": "1",
+      "model.language_model.layers.21": "1",
+      "model.language_model.layers.22": "1",
+      "model.language_model.layers.23": "1",
+      "model.language_model.layers.24": "1",
+      "model.language_model.layers.25": "1",
+      "model.language_model.layers.26": "1",
+      "model.language_model.layers.27": "1",
+      "model.language_model.layers.28": "1",
+      "model.language_model.layers.29": "1",
+      "model.language_model.layers.3": "0",
+      "model.language_model.layers.30": "1",
+      "model.language_model.layers.31": "2",
+      "model.language_model.layers.32": "2",
+      "model.language_model.layers.33": "2",
+      "model.language_model.layers.34": "2",
+      "model.language_model.layers.35": "2",
+      "model.language_model.layers.36": "2",
+      "model.language_model.layers.37": "2",
+      "model.language_model.layers.38": "2",
+      "model.language_model.layers.39": "2",
+      "model.language_model.layers.4": "0",
+      "model.language_model.layers.40": "2",
+      "model.language_model.layers.41": "2",
+      "model.language_model.layers.42": "2",
+      "model.language_model.layers.43": "2",
+      "model.language_model.layers.44": "2",
+      "model.language_model.layers.45": "2",
+      "model.language_model.layers.46": "2",
+      "model.language_model.layers.47": "2",
+      "model.language_model.layers.48": "2",
+      "model.language_model.layers.49": "3",
+      "model.language_model.layers.5": "0",
+      "model.language_model.layers.50": "3",
+      "model.language_model.layers.51": "3",
+      "model.language_model.layers.52": "3",
+      "model.language_model.layers.53": "3",
+      "model.language_model.layers.54": "3",
+      "model.language_model.layers.55": "3",
+      "model.language_model.layers.56": "3",
+      "model.language_model.layers.57": "3",
+      "model.language_model.layers.58": "3",
+      "model.language_model.layers.59": "3",
+      "model.language_model.layers.6": "0",
+      "model.language_model.layers.60": "3",
+      "model.language_model.layers.61": "3",
+      "model.language_model.layers.62": "3",
+      "model.language_model.layers.63": "3",
+      "model.language_model.layers.7": "0",
+      "model.language_model.layers.8": "0",
+      "model.language_model.layers.9": "0",
+      "model.language_model.norm": "3",
+      "model.language_model.rotary_emb": "3",
+      "model.visual": "0"
+    },
+    "quantization": "none",
+    "repository": "Qwen/Qwen3-VL-32B-Instruct",
+    "requested_revision": "0cfaf48183f594c314753d30a4c4974bc75f3ccb",
+    "resolved_revision": "0cfaf48183f594c314753d30a4c4974bc75f3ccb"
+  },
+  "outcome_firewall": {
+    "input_origin": "programmatically generated synthetic image and fixed synthetic question",
+    "panel_c_images_read": false,
+    "panel_c_outcomes_read": false,
+    "panel_c_queries_read": false,
+    "panel_c_routes_read": false,
+    "source_or_dataset_identifiers_supplied": false,
+    "synthetic_image_sha256": "d858877d20d6b2d48a97820011ce348764d1f7b57d346d7fc6f79048ff6b0213",
+    "synthetic_question_sha256": "498039bc90f96f184f71bf2d006ac1a63f310ce7a3395a6dfb332aae12a54739"
+  },
+  "runtime": {
+    "accelerate": "1.14.0",
+    "cuda_runtime": "13.0",
+    "cuda_visible_devices": [
+      "0",
+      "1",
+      "4",
+      "5"
+    ],
+    "gpu_inventory_after": [
+      {
+        "driver_version": "595.58.03",
+        "memory_free_mib": 16529,
+        "memory_total_mib": 32607,
+        "memory_used_mib": 15583,
+        "name": "NVIDIA GeForce RTX 5090",
+        "physical_index": 0,
+        "uuid": "GPU-6c21f464-085d-6c20-2e92-0e19d16118e5"
+      },
+      {
+        "driver_version": "595.58.03",
+        "memory_free_mib": 14505,
+        "memory_total_mib": 32607,
+        "memory_used_mib": 17607,
+        "name": "NVIDIA GeForce RTX 5090",
+        "physical_index": 1,
+        "uuid": "GPU-744ece5b-835d-5422-87ea-22930638ee5d"
+      },
+      {
+        "driver_version": "595.58.03",
+        "memory_free_mib": 1511,
+        "memory_total_mib": 32607,
+        "memory_used_mib": 30601,
+        "name": "NVIDIA GeForce RTX 5090",
+        "physical_index": 2,
+        "uuid": "GPU-c2705a52-63c8-4c4f-0249-4cee27cee802"
+      },
+      {
+        "driver_version": "595.58.03",
+        "memory_free_mib": 2128,
+        "memory_total_mib": 32607,
+        "memory_used_mib": 29984,
+        "name": "NVIDIA GeForce RTX 5090",
+        "physical_index": 3,
+        "uuid": "GPU-aa4b1ec4-5b8f-aaa8-69f2-992f883505a6"
+      },
+      {
+        "driver_version": "595.58.03",
+        "memory_free_mib": 14505,
+        "memory_total_mib": 32607,
+        "memory_used_mib": 17607,
+        "name": "NVIDIA GeForce RTX 5090",
+        "physical_index": 4,
+        "uuid": "GPU-f765ddcb-1000-83ff-e734-cc07ae6120d6"
+      },
+      {
+        "driver_version": "595.58.03",
+        "memory_free_mib": 15815,
+        "memory_total_mib": 32607,
+        "memory_used_mib": 16297,
+        "name": "NVIDIA GeForce RTX 5090",
+        "physical_index": 5,
+        "uuid": "GPU-3115c106-f6ee-223b-3dd4-53910e3609e2"
+      },
+      {
+        "driver_version": "595.58.03",
+        "memory_free_mib": 71,
+        "memory_total_mib": 32607,
+        "memory_used_mib": 32041,
+        "name": "NVIDIA GeForce RTX 5090",
+        "physical_index": 6,
+        "uuid": "GPU-b266be23-4a90-98eb-78eb-bf3422a22333"
+      },
+      {
+        "driver_version": "595.58.03",
+        "memory_free_mib": 388,
+        "memory_total_mib": 32607,
+        "memory_used_mib": 31724,
+        "name": "NVIDIA GeForce RTX 5090",
+        "physical_index": 7,
+        "uuid": "GPU-96967130-77c1-b97d-0549-1bf6ab59305b"
+      }
+    ],
+    "gpu_inventory_before": [
+      {
+        "driver_version": "595.58.03",
+        "memory_free_mib": 32108,
+        "memory_total_mib": 32607,
+        "memory_used_mib": 4,
+        "name": "NVIDIA GeForce RTX 5090",
+        "physical_index": 0,
+        "uuid": "GPU-6c21f464-085d-6c20-2e92-0e19d16118e5"
+      },
+      {
+        "driver_version": "595.58.03",
+        "memory_free_mib": 32108,
+        "memory_total_mib": 32607,
+        "memory_used_mib": 4,
+        "name": "NVIDIA GeForce RTX 5090",
+        "physical_index": 1,
+        "uuid": "GPU-744ece5b-835d-5422-87ea-22930638ee5d"
+      },
+      {
+        "driver_version": "595.58.03",
+        "memory_free_mib": 1511,
+        "memory_total_mib": 32607,
+        "memory_used_mib": 30601,
+        "name": "NVIDIA GeForce RTX 5090",
+        "physical_index": 2,
+        "uuid": "GPU-c2705a52-63c8-4c4f-0249-4cee27cee802"
+      },
+      {
+        "driver_version": "595.58.03",
+        "memory_free_mib": 2128,
+        "memory_total_mib": 32607,
+        "memory_used_mib": 29984,
+        "name": "NVIDIA GeForce RTX 5090",
+        "physical_index": 3,
+        "uuid": "GPU-aa4b1ec4-5b8f-aaa8-69f2-992f883505a6"
+      },
+      {
+        "driver_version": "595.58.03",
+        "memory_free_mib": 32108,
+        "memory_total_mib": 32607,
+        "memory_used_mib": 4,
+        "name": "NVIDIA GeForce RTX 5090",
+        "physical_index": 4,
+        "uuid": "GPU-f765ddcb-1000-83ff-e734-cc07ae6120d6"
+      },
+      {
+        "driver_version": "595.58.03",
+        "memory_free_mib": 32108,
+        "memory_total_mib": 32607,
+        "memory_used_mib": 4,
+        "name": "NVIDIA GeForce RTX 5090",
+        "physical_index": 5,
+        "uuid": "GPU-3115c106-f6ee-223b-3dd4-53910e3609e2"
+      },
+      {
+        "driver_version": "595.58.03",
+        "memory_free_mib": 71,
+        "memory_total_mib": 32607,
+        "memory_used_mib": 32041,
+        "name": "NVIDIA GeForce RTX 5090",
+        "physical_index": 6,
+        "uuid": "GPU-b266be23-4a90-98eb-78eb-bf3422a22333"
+      },
+      {
+        "driver_version": "595.58.03",
+        "memory_free_mib": 388,
+        "memory_total_mib": 32607,
+        "memory_used_mib": 31724,
+        "name": "NVIDIA GeForce RTX 5090",
+        "physical_index": 7,
+        "uuid": "GPU-96967130-77c1-b97d-0549-1bf6ab59305b"
+      }
+    ],
+    "hostname": "ky-lz-8-0",
+    "max_memory_per_visible_gpu": {
+      "0": 32212254720,
+      "1": 32212254720,
+      "2": 32212254720,
+      "3": 32212254720
+    },
+    "occupied_gpu_count": 4,
+    "occupied_local_gpu_indices": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "peak_memory": [
+      {
+        "local_index": 0,
+        "name": "NVIDIA GeForce RTX 5090",
+        "peak_allocated_mib": 15209.45,
+        "peak_reserved_mib": 15598.0,
+        "physical_index": "0"
+      },
+      {
+        "local_index": 1,
+        "name": "NVIDIA GeForce RTX 5090",
+        "peak_allocated_mib": 17240.37,
+        "peak_reserved_mib": 17402.0,
+        "physical_index": "1"
+      },
+      {
+        "local_index": 2,
+        "name": "NVIDIA GeForce RTX 5090",
+        "peak_allocated_mib": 17240.37,
+        "peak_reserved_mib": 17402.0,
+        "physical_index": "4"
+      },
+      {
+        "local_index": 3,
+        "name": "NVIDIA GeForce RTX 5090",
+        "peak_allocated_mib": 18402.32,
+        "peak_reserved_mib": 19064.0,
+        "physical_index": "5"
+      }
+    ],
+    "platform": "Linux-5.15.0-94-generic-x86_64-with-glibc2.39",
+    "python": "3.12.3",
+    "safetensors": "0.7.0",
+    "torch": "2.11.0+cu130",
+    "transformers": "5.8.0",
+    "visible_gpu_count": 4
+  },
+  "schema_version": 1,
+  "started_utc": "2026-09-01T06:13:22.472723+00:00",
+  "status": "PASS",
+  "timing": {
+    "generation_gpu_seconds": 13.230635,
+    "generation_gpu_seconds_rule": "occupied_gpu_count multiplied by synchronized generation wall seconds",
+    "generation_wall_seconds": 3.307659,
+    "model_load_seconds": 73.015064,
+    "preprocess_seconds": 0.053781
+  }
+}

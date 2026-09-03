@@ -1,0 +1,247 @@
+{
+  "artifact_role": "panel_c_result_determining_code_manifest",
+  "files": [
+    {
+      "bytes": 2095,
+      "path": "scripts/panel_c/_build_arm.py",
+      "sha256": "691fc73bb5744a4b1d4afb5e1e822d0b3790564cebd1d8d71359c80920609cb2"
+    },
+    {
+      "bytes": 10872,
+      "path": "scripts/panel_c/analyze_primary_endpoint.py",
+      "sha256": "60d23f3e6fad4c90f77645b85e13eedd6b6152e03c55a2c5f640ff5decb2a4ff"
+    },
+    {
+      "bytes": 5964,
+      "path": "scripts/panel_c/audit_preoutcome_access.py",
+      "sha256": "2308759044bd895510cb2d37a9512977d1e8e7322f75005d79576b5b9bdd8250"
+    },
+    {
+      "bytes": 6393,
+      "path": "scripts/panel_c/authorize_panel_c_target_execution.py",
+      "sha256": "8d560528cd90e67382e61e324ca90175a19453ffacaa482c042f44b44b311f4c"
+    },
+    {
+      "bytes": 2361,
+      "path": "scripts/panel_c/bootstrap_primary_endpoint.py",
+      "sha256": "539ec7150024e2dab0dca87006b485305eb5fc2051dae245a2ee2d1b0e2f2396"
+    },
+    {
+      "bytes": 2573,
+      "path": "scripts/panel_c/build_candidate_profiles.py",
+      "sha256": "39e4dbb592e227c5e60692a1df2b73b7ebbed994c4b8d5a62bbc8b88b138d160"
+    },
+    {
+      "bytes": 18330,
+      "path": "scripts/panel_c/build_cohort.py",
+      "sha256": "934df337212e924e68688263b386734459175750fef7930075a842e28322502b"
+    },
+    {
+      "bytes": 95,
+      "path": "scripts/panel_c/build_h15_features.py",
+      "sha256": "6b09030a23e44354f2f3d0fde8a5cd96945224a28fdb0eba052270861e0fe3b1"
+    },
+    {
+      "bytes": 93,
+      "path": "scripts/panel_c/build_h1_features.py",
+      "sha256": "73f59b5b1de96ba4fbad4d0edb30dfef5e89e749659d0bf794651e4aadc9c0d1"
+    },
+    {
+      "bytes": 93,
+      "path": "scripts/panel_c/build_h2_features.py",
+      "sha256": "bd9a26fb9ae0c2b5362292556ce340454585ba90acc11bff7932f44a4f274db5"
+    },
+    {
+      "bytes": 2338,
+      "path": "scripts/panel_c/build_nested_loso_splits.py",
+      "sha256": "34d01dbf251fbc392b240dd34e65640957ede1434ef5da370b18ee6d717b81c7"
+    },
+    {
+      "bytes": 14421,
+      "path": "scripts/panel_c/build_panel_c_preregistration_v3.py",
+      "sha256": "cfcc69d65f0dc8faf9bc45542b11fee62feaf1c59e979a8db1cf97f8b7e4346b"
+    },
+    {
+      "bytes": 2976,
+      "path": "scripts/panel_c/calculate_deployment_utility.py",
+      "sha256": "09d48b44486fc28b1d438bfd02fb5db9d6f2ac0de471de1273ce8b4b30630aed"
+    },
+    {
+      "bytes": 1570,
+      "path": "scripts/panel_c/calculate_macro_source_effect.py",
+      "sha256": "27b93dd73ded31b9c03f7ccca9c7738dab348ca363d6dcf89daf88f084506e44"
+    },
+    {
+      "bytes": 2279,
+      "path": "scripts/panel_c/combine_fold_scores.py",
+      "sha256": "8fdb2dfae3d2afc25903cb15ff3e0725ffe3f028dfe67b576ce6fc24202987e4"
+    },
+    {
+      "bytes": 6847,
+      "path": "scripts/panel_c/evaluate_fold_policy.py",
+      "sha256": "ccf33e0a92483761d4b812c5d5779d6ed386062b74abcf71b0f67112b7e54151"
+    },
+    {
+      "bytes": 2281,
+      "path": "scripts/panel_c/fit_router.py",
+      "sha256": "6c0ac1551a126f004d9f9e8c0932338ff1a1d780eabceda8df23cf1905dd1240"
+    },
+    {
+      "bytes": 3154,
+      "path": "scripts/panel_c/fit_simple_controls.py",
+      "sha256": "35ce7c8f526d54b3c86dcff95c082b46525a82d4be069d193509e93f5c8acc88"
+    },
+    {
+      "bytes": 6950,
+      "path": "scripts/panel_c/freeze_fold_policy.py",
+      "sha256": "306659d2771d425ebfa234f49a7c4c013cf422a78a1980d8dd7ac7ad32700fe0"
+    },
+    {
+      "bytes": 6919,
+      "path": "scripts/panel_c/freeze_panel_c_fold_policy_bundle.py",
+      "sha256": "5981bcbb3853ee416d333787794640bcf765cc2b07a26c51eebd4c7ed8aaf600"
+    },
+    {
+      "bytes": 8723,
+      "path": "scripts/panel_c/freeze_panel_c_target_routes.py",
+      "sha256": "cb1c1182fa9e6d34ebd3ea2e9cc04707529bced75b059eadfa83e0871cf03255"
+    },
+    {
+      "bytes": 30215,
+      "path": "scripts/panel_c/frozen_source_adapter.py",
+      "sha256": "8af89ebdafad6c445d828de2cdcadcd5431c424e5bb65b52b3f2ded29d6b8a30"
+    },
+    {
+      "bytes": 21713,
+      "path": "scripts/panel_c/run_candidate_inference.py",
+      "sha256": "f91c0cb0849b1405f62ce409d7d4101d6c7df4f937d3b0b8795a06ffd23fe0c9"
+    },
+    {
+      "bytes": 14742,
+      "path": "scripts/panel_c/run_semantic_classifier.py",
+      "sha256": "4af03c2e75f00a9b14b062a31924a41f3dc9dd7e249b5c2aea23f71aad2d7a72"
+    },
+    {
+      "bytes": 11148,
+      "path": "scripts/panel_c/run_target_routing.py",
+      "sha256": "b217a8bcc804161f53685fd072cfeb571ee932fb664206a7ed210f54ddd48a81"
+    },
+    {
+      "bytes": 9463,
+      "path": "scripts/panel_c/score_candidate_outputs.py",
+      "sha256": "d3d97009ff299570e1cbc36ee252cec61c7dcc81c53e5d4ad68b097bb8d2c089"
+    },
+    {
+      "bytes": 1749,
+      "path": "scripts/panel_c/select_fold_B_star.py",
+      "sha256": "28b4bcf55d4d2e2886a0e5d3ce6613eeaa073b7b690881f3cd38069b0e2859bd"
+    },
+    {
+      "bytes": 1807,
+      "path": "scripts/panel_c/select_fold_hyperparameters.py",
+      "sha256": "04626eb056bdf06f295ee94cc4a9e1b3ebdb4a7e0c4086b762a69b499eb4a6e6"
+    },
+    {
+      "bytes": 13350,
+      "path": "scripts/panel_c/smoke_test_qwen32b_runtime.py",
+      "sha256": "95db5415f5d1ec18348e6f3e06ce8e8ef87f380a3bc21631141e103591dec8c0"
+    },
+    {
+      "bytes": 5227,
+      "path": "scripts/panel_c/validate_semantic_constructs.py",
+      "sha256": "c84255d0d21fe28c792613c7451dcf8775ed9959e2f6751e18c4198cb8389da9"
+    },
+    {
+      "bytes": 869,
+      "path": "scripts/panel_c/verify_external_timestamp.py",
+      "sha256": "c92272c04ff86b88f3a596a947313cca443f7f311da62458d878da38c0964f84"
+    },
+    {
+      "bytes": 2129,
+      "path": "scripts/panel_c/verify_panel_c_nested_loso.py",
+      "sha256": "deca40bf0d69d4ccb8a07d39666fbd266fa074728e93b305c29d6b56d20eca18"
+    },
+    {
+      "bytes": 9549,
+      "path": "scripts/panel_c/verify_panel_c_target_chronology.py",
+      "sha256": "bfc20bf9fc6199c88ea4d1f894e6bdf4de05dfd038c35ef9949c97bf0c31993c"
+    },
+    {
+      "bytes": 1014,
+      "path": "scripts/panel_c/verify_preregistration_manifest.py",
+      "sha256": "285da13fc3ebe7ee50822268d2cd2dc75e1f4a0347382248ba3cba519238885c"
+    },
+    {
+      "bytes": 68,
+      "path": "src/karmavl/__init__.py",
+      "sha256": "3847a38f0ed556393b3e8bdc1d5b534c4743123a90720a7a8a521ae443a0e8ad"
+    },
+    {
+      "bytes": 338,
+      "path": "src/karmavl/kbs_replication_b/__init__.py",
+      "sha256": "46d96527db40a5899438b816efe243e8dc3e78df9653c52760fd927b08e5c051"
+    },
+    {
+      "bytes": 9228,
+      "path": "src/karmavl/kbs_replication_b/learners.py",
+      "sha256": "d3e39967a24d69771881f376814103b24cf363012cbdb4dcff07ab88d8938964"
+    },
+    {
+      "bytes": 494,
+      "path": "src/karmavl/panel_c/__init__.py",
+      "sha256": "aabb39ea1800d84fc6a4134a14f806d29e3db1aa90c9f38460d01012b03d63b1"
+    },
+    {
+      "bytes": 28926,
+      "path": "src/karmavl/panel_c/common.py",
+      "sha256": "322fa677b6366fe507470267839d333f652e1ce593e6a694c5dc50026ca197e2"
+    },
+    {
+      "bytes": 9854,
+      "path": "src/karmavl/panel_c/controls.py",
+      "sha256": "8c84ee90c1978414c04f078a0592bcb09a5d0ea02a0c1ebfe5736a2dfb9dd159"
+    },
+    {
+      "bytes": 3177,
+      "path": "src/karmavl/panel_c/costs.py",
+      "sha256": "36072f8c30474a7fac13d341a61573567a03db078a59a9ff56568363d86f72e3"
+    },
+    {
+      "bytes": 8265,
+      "path": "src/karmavl/panel_c/external.py",
+      "sha256": "e423b71c9ab72f1520b8fd781a58c0498411b393c23f38ae72c27a62d629803d"
+    },
+    {
+      "bytes": 8187,
+      "path": "src/karmavl/panel_c/features.py",
+      "sha256": "807c193930763feb6893af86d804350e5aadbe4eece8c947ee44ff1c445b7a3f"
+    },
+    {
+      "bytes": 13834,
+      "path": "src/karmavl/panel_c/nested.py",
+      "sha256": "b18d5eebc7be8e9d8591ed9c7c899f322eaa613b7ba01124a2d6dd748ecff18b"
+    },
+    {
+      "bytes": 4715,
+      "path": "src/karmavl/panel_c/routing.py",
+      "sha256": "5bbfaef367c335bb81235ba34e9bb6a69dc478c77003ff5da409ba9f39e0cb77"
+    },
+    {
+      "bytes": 5566,
+      "path": "src/karmavl/panel_c/scoring.py",
+      "sha256": "9014d66571762a4bc40b40a97056e9ba27a1ef63046da6b23cd80cbd7808b8bb"
+    },
+    {
+      "bytes": 5726,
+      "path": "src/karmavl/panel_c/statistics.py",
+      "sha256": "bd66dad730986f6585d42f05c1917dfc0455a0f7a63d980a496645990dac4c14"
+    },
+    {
+      "bytes": 6035,
+      "path": "verification/run_timestamp_artifact_selftest.py",
+      "sha256": "66663e29e1a9c4589144dc91ab6fe0fe9cdf1ed4b304197d2dc423c644e9fe5a"
+    }
+  ],
+  "protocol_version": "1.0.2",
+  "schema_version": 3
+}
